@@ -1,0 +1,368 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer LaTeX Presentation Template - CQU Beamer Theme
+% Purpose: Create beautiful academic presentations using LaTeX
+% Last Updated: 2025-06-06
+% Adaptor Uploader： 20230537华晓蔚
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% 文档类设置 Document Class %%%
+\documentclass{beamer}  % 使用beamer文档类来创建演示文稿
+
+%%% 字体设置 - 在文档类之后立即设置字体 %%%
+% 注意：这些设置需要使用XeLaTeX编译
+
+%%% 基础包 Basic Packages %%%
+\usepackage{auto-pst-pdf}
+\usepackage{fontspec}    % XeLaTeX下字体设置所必需
+\usepackage{ctex}       % 中文支持包
+\usepackage{hyperref}   % 提供超链接功能
+
+%%% 英文字体设置 为 Times New Roman %%%
+\setmainfont{Times New Roman} % 精确设置英文字体为 Times New Roman
+\usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra} % 数学符号、颜色、多列、表格美化等
+\usepackage{graphicx}   % 图形处理包
+\usepackage{pstricks}   % 高级绘图包（用于矢量图形绘制）
+\usepackage{listings}   % 代码显示包
+\usepackage{stackengine} % 垂直堆叠元素
+
+%%% 颜色定义 Color Definition %%%
+\xdefinecolor{nnucolor}{rgb}{0.000,0.447,0.741} % 定义主题颜色（蓝色）
+
+%%% 主题样式 Theme Style %%%
+\usepackage{cqu}       % 使用重庆大学自定义的beamer主题
+
+%%% 演示文稿信息 Presentation Information %%%
+\author{你的名字}
+\title{学术汇报与答辩的CQU-Beamer模板}
+\subtitle{CQU LaTeX-PPT 指南}
+\institute{重庆大学计算机学院}
+\date{2025年6月6日}
+
+%%% 命令与环境显示定义 - 用于在演示中格式化显示LaTeX命令和环境名称 %%%
+\def\cmd#1{\texttt{\color{red}\footnotesize $\backslash$#1}}  % LaTeX命令的显示方式
+\def\env#1{\texttt{\color{blue}\footnotesize #1}}          % LaTeX环境的显示方式
+
+%%% 代码颜色定义 Code Colors %%%
+\definecolor{deepblue}{rgb}{0,0,0.5}     % 深蓝色用于关键字
+\definecolor{deepred}{rgb}{0.6,0,0}      % 深红色用于强调
+\definecolor{deepgreen}{rgb}{0,0.5,0}    % 深绿色用于字符串
+\definecolor{halfgray}{gray}{0.55}       % 灰色用于行号
+
+%%% 代码显示设置 Code Listing Settings %%%
+\lstset{
+    basicstyle=\ttfamily\small,                   % 基本代码样式：等宽小字体
+    keywordstyle=\bfseries\color{deepblue},       % 关键字样式：粗体深蓝色
+    emphstyle=\ttfamily\color{deepred},           % 强调样式：等宽深红色
+    stringstyle=\color{deepgreen},                % 字符串样式：深绿色
+    numbers=left,                                 % 行号位置：左侧
+    numberstyle=\small\color{halfgray},           % 行号样式：小号灰色
+    rulesepcolor=\color{red!20!green!20!blue!20}, % 分隔线颜色：淡蓝色
+    frame=shadowbox                              % 框架样式：阴影盒
+}
+
+
+%%% 文档开始 Document Start %%%
+\begin{document}
+
+%%% 标题页 Title Page %%%
+\kaishu  % 使用楷书字体
+\begin{frame}
+    \titlepage  % 显示标题页信息
+    % 添加学校校徽
+    \begin{figure}[htpb]
+        \begin{center}
+            \includegraphics[width=0.5\linewidth]{pic/校徽+中英文校名_蓝色.pdf}
+        \end{center}
+    \end{figure}
+\end{frame}
+
+%%% 目录页 Table of Contents %%%
+\begin{frame}{内容概览 Contents}
+    % 显示目录，只展示节（section）级别
+    \tableofcontents[sectionstyle=show]
+\end{frame}
+
+
+%%% 第一部分：研究动机 Part 1: Foundations of Academic Presentations %%%
+\section{研究动机}
+
+\begin{frame}{为什么选择LaTeX Beamer做学术演示}
+    % 渐进显示项目(可选):[<+-| alert@+>] 或手动插入 \pause
+    \begin{itemize} 
+        \item \textbf{专业性与质量}：Beamer以其高质量的排版在学术界广受认可
+        \pause
+        \item \textbf{数学公式的完美支持}：\LaTeX{}在数学公式排版上无可比拟
+        \pause
+        \item \textbf{一致性与可复用性}：便于维护和共享的文本格式
+        \pause
+        \item \textbf{版本控制友好}：易于与Git等版本控制系统集成
+    \end{itemize}
+    \vspace{0.5cm}
+    \begin{block}{技术提示}
+        \begin{itemize}
+            \item 中文支持请选择 Xe\LaTeX{} 或 Lua\LaTeX{} 编译器
+            \item 本模板基于清华大学Beamer模板魔改，并进行了CQU定制
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+
+\section{研究现状}
+
+\subsection{Beamer主题}
+
+\begin{frame}{模板来源}
+    \begin{itemize}
+        \item 本模板来源自 \newline \url{https://www.latexstudio.net/archives/4051.html}
+        \item 最初的模板来自 \href{http://far.tooold.cn/post/latex/beamertsinghua}{清华大学Beamer模板}
+        \item THU原作者作品集：\href{https://github.com/Trinkle23897/oi_slides}{\color{purple}{GitHub 仓库}}
+    \end{itemize}
+\end{frame}
+
+
+\section{研究内容}
+
+\subsection{美化主题}
+
+\begin{frame}{这一份主题与原始的THU Beamer Theme区别在于}
+    \begin{itemize}
+        \item 更多该模板的功能可以参考 \url{https://www.latexstudio.net/archives/4051.html}
+        \item 下面列举出了一些Beamer的用法，部分节选自 \url{https://tuna.moe/event/2018/latex/}
+    \end{itemize}
+\end{frame}
+
+\subsection{如何更好地做Beamer}
+
+\begin{frame}{Why Beamer}
+    \begin{itemize}
+        \item \LaTeX 广泛用于学术界，期刊会议论文模板
+    \end{itemize}
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{c|c}
+            Microsoft\textsuperscript{\textregistered}  Word & \LaTeX \\
+            \hline
+            文字处理工具 & 专业排版软件 \\
+            AI无法排版 & LLM/MCP可自动接管 \\
+            所见即所得 & 所见即所想，所想即所得 \\
+            高级功能不易掌握 & 进阶难，但一般用不到 \\
+            处理长文档需要丰富经验 & 和短文档处理基本无异 \\
+            花费大量时间调格式 & 无需担心格式，专心作者内容 \\
+            公式排版差强人意 & 尤其擅长公式排版 \\
+            二进制格式，兼容性差 & 文本文件，易读、稳定 \\
+            付费商业许可 & 自由免费使用 \\
+        \end{tabular}
+    \end{table}
+\end{frame}
+
+
+\begin{frame}{数学公式排版示例}
+    \begin{exampleblock}{无编号公式示例 (使用 equation* 环境)} 
+        \begin{equation*}
+            J(\theta) = \mathbb{E}_{\pi_\theta}[G_t] = \sum_{s\in\mathcal{S}} d^\pi (s)V^\pi(s)=\sum_{s\in\mathcal{S}} d^\pi(s)\sum_{a\in\mathcal{A}}\pi_\theta(a|s)Q^\pi(s,a)
+        \end{equation*}
+    \end{exampleblock}
+    \begin{exampleblock}{多行对齐公式示例 (使用 align 环境)\footnote{公式中的文本应使用 $\backslash$mathrm\{\} 或 $\backslash$text\{\} 包含，比如 $\mathrm{clip}$ 而非 $clip$}}
+        % 使用 & 符号对齐等号
+        \begin{align}
+            Q_\mathrm{target}&=r+\gamma Q^\pi(s^\prime, \pi_\theta(s^\prime)+\epsilon)\\
+            \epsilon&\sim\mathrm{clip}(\mathcal{N}(0, \sigma), -c, c)\nonumber
+        \end{align}
+    \end{exampleblock}
+\end{frame}
+
+
+\begin{frame}{高级公式展示}
+    \begin{exampleblock}{高级公式展示}
+        \begin{align}
+            \label{eq:1}
+            \begin{split}
+                \left| \frac{1}{2}\left( \alpha + \beta \right) \right|^2
+                &= \left| \frac{1}{2}\left( \left| \alpha \right| + \left| \beta \right| \right) \right|^2 \\
+                &= \frac{1}{4} \left| \alpha \right|^2 + \frac{1}{4} \left| \beta \right|^2 + \frac{1}{2} \left| \alpha \right| \left| \beta \right| \\
+                &= \frac{1}{4} \left( \alpha \alpha^* + \beta \beta^* \right) + \frac{1}{2} \left| \alpha \right| \left| \beta \right|
+            \end{split}
+        \end{align}
+    \end{exampleblock}
+\end{frame}
+
+\begin{frame}{图形与分栏}
+    % From thuthesis user guide.
+    \begin{minipage}[c]{0.3\linewidth}
+        \psset{unit=0.8cm}
+        \begin{pspicture}(-1.75,-3)(3.25,4)
+            \psline[linewidth=0.25pt](0,0)(0,4)
+            \rput[tl]{0}(0.2,2){$\vec e_z$}
+            \rput[tr]{0}(-0.9,1.4){$\vec e$}
+            \rput[tl]{0}(2.8,-1.1){$\vec C_{ptm{ext}}$}
+            \rput[br]{0}(-0.3,2.1){$\theta$}
+            \rput{25}(0,0){%
+            \psframe[fillstyle=solid,fillcolor=lightgray,linewidth=.8pt](-0.1,-3.2)(0.1,0)}
+            \rput{25}(0,0){%
+            \psellipse[fillstyle=solid,fillcolor=yellow,linewidth=3pt](0,0)(1.5,0.5)}
+            \rput{25}(0,0){%
+            \psframe[fillstyle=solid,fillcolor=lightgray,linewidth=.8pt](-0.1,0)(0.1,3.2)}
+            \rput{25}(0,0){\psline[linecolor=red,linewidth=1.5pt]{->}(0,0)(0.,2)}
+            % 添加红色箭头表示向量
+            \psline[linecolor=red,linewidth=1.25pt]{->}(0,0)(0,2)
+            \psline[linecolor=red,linewidth=1.25pt]{->}(0,0)(3,-1)
+            \psarc{->}{2.1}{90}{112.5}
+            \rput[bl](.1,.01){C}
+        \end{pspicture}
+    \end{minipage}\hspace{2cm}
+    \begin{minipage}[c]{0.50\linewidth}       
+            \begin{beamercolorbox}[rounded=true,shadow=true,wd=\linewidth]{block body}
+                \textbf{参数说明}\medskip
+                \begin{itemize}
+                  \setlength\itemsep{1ex}
+                  \item[$\theta$] 旋转角度
+                  \item[$\vec e_z,\ \vec e_x$] 全局基矢
+                  \item[$\vec e$] 旋转后的基矢
+                  \item[$\vec C_{\rm ext}$] 作用在点 C 的外部力
+                  \item[\textbf{C}] 力的作用点
+                \end{itemize}
+            \end{beamercolorbox}
+        \end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]{\LaTeX{} 常用命令}
+    \begin{exampleblock}{命令}
+        \centering
+        \footnotesize
+        \begin{tabular}{llll}
+            \cmd{chapter} & \cmd{section} & \cmd{subsection} & \cmd{paragraph} \\
+            章 & 节 & 小节 & 带题头段落 \\\hline
+            \cmd{centering} & \cmd{emph} & \cmd{verb} & \cmd{url} \\
+            居中对齐 & 强调 & 原样输出 & 超链接 \\\hline
+            \cmd{footnote} & \cmd{item} & \cmd{caption} & \cmd{includegraphics} \\
+            脚注 & 列表条目 & 标题 & 插入图片 \\\hline
+            \cmd{label} & \cmd{cite} & \cmd{ref} \\
+            标号 & 引用参考文献 & 引用图表公式等\\\hline
+        \end{tabular}
+    \end{exampleblock}
+    \begin{exampleblock}{环境}
+        \centering
+        \footnotesize
+        \begin{tabular}{lll}
+            \env{table} & \env{figure} & \env{equation}\\
+            表格 & 图片 & 公式 \\\hline
+            \env{itemize} & \env{enumerate} & \env{description}\\
+            无编号列表 & 编号列表 & 描述 \\\hline
+        \end{tabular}
+    \end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{\LaTeX{} 环境命令举例}
+    \begin{minipage}{0.5\linewidth}
+\begin{lstlisting}[language=TeX]
+\begin{enumerate}
+  \item 第一点
+  \item 第二点
+  \item 第三点
+  \begin{enumerate}
+    \item 子项1
+    \item 子项2
+  \end{enumerate}
+\end{enumerate}
+\end{lstlisting}
+    \end{minipage}\hspace{1cm}
+    \begin{minipage}{0.3\linewidth}
+        \begin{enumerate}
+            \item 第一点
+            \item 第二点
+            \item 第三点
+            \begin{enumerate}
+                \item 子项1
+                \item 子项2
+            \end{enumerate}
+        \end{enumerate}
+    \end{minipage}
+    \medskip
+    % \pause
+\end{frame}
+
+\begin{frame}[fragile]{表格示例}
+    \begin{columns}
+        \column{.6\textwidth}
+\begin{lstlisting}[language=TeX]
+\begin{table}[htbp]
+    \caption{矩阵分析}
+    \label{tab:matrix}
+    \centering
+    \begin{tabular}{ccc}
+    \toprule
+    矩阵 & 特征值 & 稳定性
+    \midrule
+    $A_1$ & $\lambda<0$&稳定
+    $A_2$ & $\lambda>0$&不稳定
+    $A_3$ & $\lambda=0$&临界
+    \bottomrule
+    \end{tabular}
+\end{table}
+见表~\ref{tab:matrix}。
+\end{lstlisting}
+        \column{.4\textwidth}
+        \begin{table}[htpb]
+            \centering
+            \caption{矩阵分析}
+            \label{tab:matrix}
+            \begin{tabular}{@{}ccc@{}}
+                \toprule
+                矩阵 & 特征值 & 稳定性 \\
+                \midrule
+                $A_1$ & $\lambda < 0$ & 稳定 \\
+                $A_2$ & $\lambda > 0$ & 不稳定 \\
+                $A_3$ & $\lambda = 0$ & 临界 \\
+                \bottomrule
+            \end{tabular}
+        \end{table}
+        \small 见表~\ref{tab:matrix}。
+    \end{columns}
+\end{frame}
+
+\begin{frame}{作图}
+    \begin{itemize}
+        \item 矢量图 eps, ps, pdf
+        \begin{itemize}
+            \item METAPOST, pstricks, pgf $\ldots$
+            \item Xfig, Dia, Visio, Inkscape $\ldots$
+            \item Matlab / Excel 等保存为 pdf
+        \end{itemize}
+        \item 标量图 png, jpg, tiff $\ldots$
+        \begin{itemize}
+            \item 提高清晰度，避免发虚
+            \item 应尽量避免使用
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\section{参考文献}
+
+\begin{frame}[allowframebreaks]
+  \frametitle{参考文献}
+  % 1. 指定参考文献的样式 (可选：plain、alpha、abbrv 等)
+  \bibliographystyle{alpha}
+  % 2. 显示 ref.bib 中的所有条目，即使没有被引用
+  \nocite{*}
+  % 3. 加载参考文献数据文件
+  \bibliography{ref}
+\end{frame}
+
+%%% 致谢页 Acknowledgements Slide %%%
+\begin{frame}{致谢 \& 联系方式}
+  \begin{itemize}
+    \item 改编者（Author）：Will-Hxw
+    \item 模板源码仓库（Repository）：\url{https://github.com/Will-hxw/CQU-Beamer-LaTexPPT}
+    \item 联系邮箱（Email）：\href{mailto:xiaoweihuacqu@gmail.com}{xiaoweihuacqu@gmail.com}
+  \end{itemize}
+  \vspace{1cm}
+\end{frame}
+
+%%% 结束页 End Slide %%%
+\begin{frame}
+    \begin{center}
+        {\Huge\calligra Thanks!}
+    \end{center}
+\end{frame}
+
+\end{document}
