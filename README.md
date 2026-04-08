@@ -18,9 +18,9 @@
 
 ## 🚀 说明
 
-* 使用overleaf打开 `slide.tex` 并使用 **XeLaTeX** 编译；
+* 使用overleaf/Openai prism打开 `slide.tex` 并使用 **XeLaTeX** 编译；
 * 📽️ **PDF 演示推荐播放器**：WPS、Adobe Acrobat；
-* 🔁 若需将 PDF 转换为 PPT，可使用在线工具 [PDF to PPT](https://www.pdf.to/ppt/)；
+* 🔁 若需将 PDF 转换为 PPT，可使用在线工具 [PDF to PPT](https://www.pdf.to/ppt/)/其他OCR等工具；
 
 ## 📌 致谢
 
