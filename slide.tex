@@ -12,7 +12,7 @@
 % 注意：这些设置需要使用XeLaTeX编译
 
 %%% 基础包 Basic Packages %%%
-\usepackage{auto-pst-pdf}
+\usepackage[pdf]{pstricks}
 \usepackage{fontspec}    % XeLaTeX下字体设置所必需
 \usepackage{ctex}       % 中文支持包
 \usepackage{hyperref}   % 提供超链接功能
@@ -20,10 +20,11 @@
 %%% 英文字体设置 为 Times New Roman %%%
 \setmainfont{Times New Roman}
 \setsansfont{Times New Roman}
-\newfontfamily\wenkai{LXGWWenKai-Medium}
+\newfontfamily\wenkai{LXGWWenKai-Medium}[Scale=MatchLowercase]
+\setCJKsansfont{LXGWWenKai-Medium}[Scale=MatchLowercase]
 \usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra} % 数学符号、颜色、多列、表格美化等
 \usepackage{graphicx}   % 图形处理包
-\usepackage{pstricks}   % 高级绘图包（用于矢量图形绘制）
+\usepackage{auto-pst-pdf}
 \usepackage{listings}   % 代码显示包
 \usepackage{stackengine} % 垂直堆叠元素
 
@@ -35,10 +36,9 @@
 
 %%% 导航栏与标题页字体 - LXGW WenKai %%%
 \setbeamerfont{navigation bar}{family=\wenkai}
-\setbeamerfont{title}{family=\wenkai}
-\setbeamerfont{author}{family=\wenkai}
-\setbeamerfont{institute}{family=\wenkai}
-\setbeamerfont{subtitle}{family=\wenkai}
+\setbeamerfont{author in head/foot}{family=\wenkai}
+\setbeamerfont{title in head/foot}{family=\wenkai}
+\setbeamerfont{institute in head/foot}{family=\wenkai}
 
 %%% 演示文稿信息 Presentation Information %%%
 \author{你的名字}
