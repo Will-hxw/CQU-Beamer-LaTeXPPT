@@ -1,0 +1,22 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.nav
+*.vrb
+*.snm
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Fonts
+*.ttf
+*.otf
+*.pfb
+
+# OS files
+.DS_Store
+Thumbs.db
