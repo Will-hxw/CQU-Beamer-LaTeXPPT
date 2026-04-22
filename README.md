@@ -11,16 +11,33 @@
 ├── slide.tex             # 📄 主文件（Beamer 演示文稿入口）
 ├── cqu.sty               # 🎨 样式文件（自定义主题）
 ├── ref.bib               # 📚 参考文献（BibTeX 格式）
+├── build.sh              # 🔧 本地编译脚本
 ├── pic/                  # 🖼️ 图片资源（插图目录）
+├── slide.pdf             # 📑 编译产物（由 build.sh 生成）
 ├── CQU-Beamer-Theme.pdf  # 📑 示例 PDF（编译后演示效果）
 └── README.md             # 📘 本说明文档
 ```
 
-## 🚀 说明
+## 🚀 编译方式
 
-* 使用overleaf/Openai prism打开 `slide.tex` 并使用 **XeLaTeX** 编译；
-* 📽️ **PDF 演示推荐播放器**：WPS、Adobe Acrobat；
-* 🔁 若需将 PDF 转换为 PPT，可使用在线工具 [PDF to PPT](https://www.pdf.to/ppt/)/其他OCR等工具；
+### 本地编译
+
+```bash
+bash build.sh
+```
+
+需要本地安装 **XeLaTeX**（如 MiKTeX、TeX Live）。编译完成后自动清理中间文件，仅保留 `slide.pdf`。
+
+### 在线编译
+
+* 🟢 **[Overleaf](https://www.overleaf.com)** — 打开 `slide.tex`，编译器选择 **XeLaTeX**
+* 🔵 **[OpenAI Prism](https://prism.openai.com/)** — OpenAI 推出的在线 LaTeX 论文写作平台
+
+
+## 📽️ PDF 演示
+
+* 推荐播放器：WPS、Adobe Acrobat；
+* 若需将 PDF 转换为 PPT，可使用 [PDF to PPT](https://www.pdf.to/ppt/) 等OCR/PDF转PPT工具；
 
 ## 📌 致谢
 
